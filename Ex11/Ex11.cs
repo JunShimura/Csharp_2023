@@ -32,18 +32,78 @@
                 Console.WriteLine("入力エラーです");
             }
 
-            for (var j=0;j<height;j++ )
+            const char char1 = '■';
+            const char char2 = '□';
+
+            // 長方形
+            Console.WriteLine("長方形");
+            for (var j = 0; j < height; j++)
             {
                 //1行分の処理
                 var s = string.Empty;
                 for (var i = 0; i < width; i++)
                 {
-                    s+="□";
+                    s += char1;
                 }
                 Console.WriteLine(s);
             }
-
-
+            // 横縞
+            Console.WriteLine("横縞");
+            for (var j = 0; j < height; j++)
+            {
+                //1行分の処理
+                var s = string.Empty;
+                for (var i = 0; i < width; i++)
+                {
+                    if (j % 2 == 0) //描く行は偶数番目か
+                    {
+                        s += char1;
+                    }
+                    else
+                    {
+                        s += char2;
+                    }
+                }
+                Console.WriteLine(s);
+            }
+            // 縦縞
+            Console.WriteLine("縦縞");
+            for (var j = 0; j < height; j++)
+            {
+                //1行分の処理
+                var s = string.Empty;
+                for (var i = 0; i < width; i++)
+                {
+                    if (i % 2 == 0) //描く列は偶数番目か
+                    {
+                        s += char1;
+                    }
+                    else
+                    {
+                        s += char2;
+                    }
+                }
+                Console.WriteLine(s);
+            }
+            // チェック
+            Console.WriteLine("チェック柄");
+            for (var j = 0; j < height; j++)
+            {
+                //1行分の処理
+                var s = string.Empty;
+                for (var i = 0; i < width; i++)
+                {
+                    if ((i + j) % 2 == 0) //チェックか
+                    {
+                        s += char1;
+                    }
+                    else
+                    {
+                        s += char2;
+                    }
+                }
+                Console.WriteLine(s);
+            }
         }
     }
 }
