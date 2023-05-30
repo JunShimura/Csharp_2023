@@ -33,7 +33,7 @@
                 Console.WriteLine("入力エラーです");
             }
 
-            uint centerX= width/2;
+            uint centerX= width/2-2;
             uint centerY= height/2;
             for (var j = 0; j < height; j++)
             {
@@ -42,9 +42,17 @@
                 for (var i = 0; i < width; i++)
                 {
                     var d= Math.Sqrt(Math.Pow(centerX-i, 2) + Math.Pow(centerY-j, 2));
-                    if (d < centerX+EDGE_WIDTH && d> centerX - EDGE_WIDTH )
+                    if (d < centerX/*+EDGE_WIDTH && d> centerX - EDGE_WIDTH*/ )
                     {
-                        s += "* ";
+                        if ((i + j) % 2 == 0) //チェックか
+                        {
+                            s += "□";
+                        }
+                        else
+                        {
+                            s += "■";
+                        }
+                        
                     }
                     else
                     {
