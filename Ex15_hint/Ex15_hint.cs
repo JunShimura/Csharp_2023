@@ -16,6 +16,9 @@
                     "zero", "one",  "two",  "three",    "four", "five", "six",  "seven",    "eight",    "nine",
                     "ten",  "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"
                 };
+
+            string[] words20to90 =
+              { "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
             string answer=string.Empty;
             if (inputNumber < 20)
             {
