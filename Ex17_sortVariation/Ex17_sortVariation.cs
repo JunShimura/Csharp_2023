@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Linq;
+using System.Drawing;
 
 namespace Ex17_sortVariation
 {
@@ -18,12 +20,14 @@ namespace Ex17_sortVariation
             int[] table1 = new int[tableSize];
             int[] table2 = new int[tableSize];
             int[] table3 = new int[tableSize];
+            int[] table4 = new int[tableSize];
+
             for (int i = 0; i < table0.Length; i++)
             {
                 table0[i]
                     = table1[i]
                     = table2[i]
-                    = table3[i]
+                    = table3[i] = table4[i]
                     = random.Next(randomRangeMin, randomRangeMax);  //Randomを使う場合
                   //= table0.Length - i;
                 //Console.WriteLine($"table[{i}]={table[i]}");
@@ -83,7 +87,7 @@ namespace Ex17_sortVariation
 
             // 前回のスタートからストップまでの経過時間を表示
             Console.WriteLine($"{sw.ElapsedMilliseconds}ミリ秒");
-
+            
             // 組み込まれたSort
             Console.WriteLine(".Sort,Reverse開始");
             sw.Reset();
@@ -104,6 +108,18 @@ namespace Ex17_sortVariation
             Array.Sort(table3,revComparer);
             sw.Stop();  // 時間計測終了
 
+            // 前回のスタートからストップまでの経過時間を表示
+            Console.WriteLine($"{sw.ElapsedMilliseconds}ミリ秒");
+
+            // 組み込まれたLinq
+            Console.WriteLine("OrderBy開始");
+            IEnumerable<int> testOrderBy;
+            sw.Reset();
+            sw.Start(); // 時間計測
+            testOrderBy= table4.OrderBy(o => o).Reverse();
+            //Console.WriteLine($"first={testOrderBy.First().ToString()}");
+            Console.WriteLine($"last={testOrderBy.Last().ToString()}");
+            sw.Stop();  // 時間計測終了
             // 前回のスタートからストップまでの経過時間を表示
             Console.WriteLine($"{sw.ElapsedMilliseconds}ミリ秒");
         }
