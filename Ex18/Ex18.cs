@@ -1,4 +1,6 @@
-﻿namespace Ex18
+﻿using System.Text;
+
+namespace Ex18
 {
     internal class Ex18
     {
@@ -20,6 +22,11 @@
         static void HelloWorldBelorussiya()
         {
             Console.WriteLine("Прывітанне Сусвет!");
+        }
+        static void HelloWorldKorean()
+        {
+            Console.OutputEncoding = Encoding.UTF32;
+            Console.WriteLine("안녕하세요!");
         }
     }
 }
