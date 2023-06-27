@@ -29,7 +29,7 @@ namespace Ex22_hint
             float h = 0; //高さ
             while (true)
             {
-                Console.WriteLine($"高さは幾つですか？\n範囲は{hMin}から{hMax}");
+                ssdfConsole.WriteLine($"高さは幾つですか？\n範囲は{hMin}から{hMax}");
                 if (float.TryParse(Console.ReadLine(), out h))
                 {
                     if (h >= hMin && h < hMax)
