@@ -107,6 +107,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge04", "Challenge04\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex20", "Ex20\Ex20.csproj", "{0B3D6266-FCAE-4A80-A69A-C156667C8C08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex22_hint", "Ex22_hint\Ex22_hint.csproj", "{F02C73F6-DFD8-4AB4-82A5-0439E640307E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
