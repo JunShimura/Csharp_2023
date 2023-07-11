@@ -1,4 +1,4 @@
-﻿namespace Ex23;
+﻿//namespace Ex23;
 
 internal class Ex23
 {
@@ -13,8 +13,8 @@ internal class Ex23
         while (true)
         {
             var head = InputInt("頭の数を入力してください", headMin, headMax);
-            //var leg = InputInt("脚の数を入力してください", head*2, head*4+1);
-            var leg = InputInt("脚の数を入力してください", legMin, legMax);
+            var leg = InputInt("脚の数を入力してください", head*2, head*4+1);
+            //var leg = InputInt("脚の数を入力してください", legMin, legMax);
             var tempTurtle = (float)leg / 2 - head;
             var tempCrane = (float)head - tempTurtle;
             if (isNaturalNumber(tempTurtle) && isNaturalNumber(tempCrane))
