@@ -1,6 +1,6 @@
 ﻿namespace Ex25_hint;
 
-internal class Program
+internal class Ex25_hint
 {
     static void Main(string[] args)
     {
