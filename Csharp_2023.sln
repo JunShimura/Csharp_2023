@@ -123,9 +123,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex22", "Ex22\Ex22.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryCatch", "TryCatch\TryCatch.csproj", "{E57AF17C-CC6F-41F8-82E1-A0858C55F685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefOut", "RefOut\RefOut.csproj", "{F8F05037-317F-40E3-9D5D-9F4A7C3664AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefOut", "RefOut\RefOut.csproj", "{F8F05037-317F-40E3-9D5D-9F4A7C3664AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefOutSample", "RefOutSample\RefOutSample.csproj", "{3BFAC9FE-6FAF-49BB-B9EB-144575E100D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefOutSample", "RefOutSample\RefOutSample.csproj", "{3BFAC9FE-6FAF-49BB-B9EB-144575E100D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex25_hint", "Ex25_hint\Ex25_hint.csproj", "{37E5BA13-B162-4CCD-9C5B-00400007A118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -381,6 +383,10 @@ Global
 		{3BFAC9FE-6FAF-49BB-B9EB-144575E100D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BFAC9FE-6FAF-49BB-B9EB-144575E100D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BFAC9FE-6FAF-49BB-B9EB-144575E100D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E5BA13-B162-4CCD-9C5B-00400007A118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E5BA13-B162-4CCD-9C5B-00400007A118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E5BA13-B162-4CCD-9C5B-00400007A118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E5BA13-B162-4CCD-9C5B-00400007A118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
