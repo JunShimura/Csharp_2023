@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 
 namespace MethodSample
 {
-    internal class MEthodSample
+    internal class MethodSample
     {
         static void Main(string[] args)
         {
@@ -13,20 +13,37 @@ namespace MethodSample
             Console.Write("体重の入力(kg):");
             var weight = double.Parse(Console.ReadLine());  // 体重
             */
-            var name = InputString("名前を入力：");
-            var height = InputNumber("身長の入力(cm):", 100, 300);
-            var weight = InputNumber("体重の入力(kg):");
+            var name = InputUtility.InputString("名前を入力：");
+            var height = InputUtility.InputNumber("身長の入力(cm):", 100, 300,"うそはだめですよ");
+            var weight = InputUtility.InputNumber("体重の入力(kg):",10,500);
             height /= 100;
             var bmi = weight / (height * height);  // BMIを算出
             Console.Write($"{name}さんの身長={height},体重={weight},\nBMI={bmi.ToString("F2")}");
         }
-        private static string InputString(string message)
+    }
+    //使うときはここからコピー==============
+
+    /// <summary>
+    /// Input用の汎用class
+    /// </summary>
+    class InputUtility
+    {
+        public static bool isNaturalNumberOr0(double number)
+        {
+            return (number == 0 || isNaturalNumber(number));
+        }
+        public static bool isNaturalNumber(double number)
+        {
+            return (number > 0 && Math.Floor(number) == number);
+        }
+
+        public static string InputString(string message)
         {
             Console.WriteLine(message);
             return Console.ReadLine();
         }
 
-        private static double InputNumber(string message)
+        public static double InputNumber(string message)
         {
             double i;
             while (true)
@@ -41,7 +58,7 @@ namespace MethodSample
             return i;
         }
 
-        private static double InputNumber(string message, double min, double max)
+        public static double InputNumber(string message, double min, double max,string errMessage= "入力範囲エラー")
         {
             double i;
             while (true)
@@ -51,13 +68,12 @@ namespace MethodSample
                 {
                     break;
                 }
-                Console.WriteLine("入力範囲エラー");
+                Console.WriteLine(errMessage);
             }
             return i;
         }
 
-
-        private static int InputInt(string message)
+        public static int InputInt(string message)
         {
             int i;
             while (true)
@@ -72,7 +88,9 @@ namespace MethodSample
             return i;
         }
 
-        private static int InputInt(string message, int min, int max)
+
+
+        public static int InputInt(string message, int min, int max,string errMessage= "入力範囲エラー")
         {
             int i;
             while (true)
@@ -82,9 +100,13 @@ namespace MethodSample
                 {
                     break;
                 }
-                Console.WriteLine("入力範囲エラー");
+                Console.WriteLine(errMessage);
             }
             return i;
         }
     }
+
+    // ここまでコピー==============
+
+
 }
