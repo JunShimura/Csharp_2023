@@ -131,15 +131,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex25_hint", "Ex25_hint\Ex25
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex25", "Ex25\Ex25.csproj", "{BF33585A-93B6-451A-9A29-CC2936E9BC14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex25_tupple", "Ex25_tupple\Ex25_tupple.csproj", "{5268F7EE-6AD7-4AE1-A4DE-DE8F340245D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex25_tupple", "Ex25_tupple\Ex25_tupple.csproj", "{5268F7EE-6AD7-4AE1-A4DE-DE8F340245D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex25_struct", "Ex25_struct\Ex25_struct.csproj", "{5DE80496-4BDD-44FE-9915-E147DE15A92B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex25_struct", "Ex25_struct\Ex25_struct.csproj", "{5DE80496-4BDD-44FE-9915-E147DE15A92B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classless", "Classless\Classless.csproj", "{83882626-9E2D-48AD-9BCD-50131ECFA964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classless", "Classless\Classless.csproj", "{83882626-9E2D-48AD-9BCD-50131ECFA964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassSample", "ClassSample\ClassSample.csproj", "{E4CF2CDA-E545-4000-8E26-92DC2B1AF209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassSample", "ClassSample\ClassSample.csproj", "{E4CF2CDA-E545-4000-8E26-92DC2B1AF209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex26_hint", "Ex26_hint\Ex26_hint.csproj", "{DE7969E6-213B-43A7-AFD8-AE681C23F515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex26_hint", "Ex26_hint\Ex26_hint.csproj", "{DE7969E6-213B-43A7-AFD8-AE681C23F515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex26", "Ex26\Ex26.csproj", "{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -423,6 +425,10 @@ Global
 		{DE7969E6-213B-43A7-AFD8-AE681C23F515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7969E6-213B-43A7-AFD8-AE681C23F515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE7969E6-213B-43A7-AFD8-AE681C23F515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
