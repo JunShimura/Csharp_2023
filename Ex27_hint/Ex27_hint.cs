@@ -1,9 +1,19 @@
-﻿namespace Ex26
+﻿using System;
+
+namespace Ex27_hint
 {
-    internal class Ex26
+    internal class Ex27
     {
         static void Main(string[] args)
         {
+            Rectangle rectangle = new Rectangle(
+                (float)InputUtility.InputNumber("幅："),
+                (float)InputUtility.InputNumber("高さ：")
+            );
+            Rectangle rectangle1 = new Rectangle(3, 2.5f);
+            Console.WriteLine($"rectangleの面積は{rectangle.GetSurface()}、周囲の長さは{rectangle.GetPerimeter()}");
+            Console.WriteLine($"rectangle1の面積は{rectangle1.GetSurface()}、周囲の長さは{rectangle1.GetPerimeter()}");
+
             Box box = new Box(
                 (float)InputUtility.InputNumber("幅："),
                 (float)InputUtility.InputNumber("高さ："),
@@ -14,9 +24,55 @@
             // 作られたboxのインスタンスを用いて表面積と体積を取り出して表示
             Console.WriteLine($"boxの表面積は{box.GetSurface()}、体積は{box.GetVolume()}");
             Console.WriteLine($"box1の表面積は{box1.GetSurface()}、体積は{box1.GetVolume()}");
-
         }
     }
+    // 平面の図形
+    /*以下がテンプレになる
+    class Xxx
+    {
+        // 保持する変数
+
+        // コンストラクタ
+        public Xxx( 必要なパラメータ)
+        {
+            保持する値にコピー
+        }
+        //面積を取得
+        public float GetSurface()
+        {
+            //面積を求め返す    
+        }
+        //周囲の長さを取得
+        public float GetPerimeter()
+        {
+            // 周囲の長さを求め返す
+        }
+    }    
+    */
+
+
+    class Rectangle
+    {
+        private float width;    // 幅
+        private float height;   // 高さ
+        public Rectangle(float width, float height)
+        {
+            this.width = width;
+            this.height = height;
+        }
+        //面積を取得
+        public float GetSurface()
+        {
+            return width * height;
+        }
+        //周囲の長さを取得
+        public float GetPerimeter()
+        {
+            return (width + height) * 2;
+        }
+
+    }
+
     // Boxクラスをこの下に作る
     class Box
     {
@@ -50,7 +106,6 @@
     /// </summary>
     class InputUtility
     {
-
         public static double InputNumber(string message)
         {
             double i;

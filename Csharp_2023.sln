@@ -141,7 +141,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassSample", "ClassSample\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex26_hint", "Ex26_hint\Ex26_hint.csproj", "{DE7969E6-213B-43A7-AFD8-AE681C23F515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex26", "Ex26\Ex26.csproj", "{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex26", "Ex26\Ex26.csproj", "{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex27_hint", "Ex27_hint\Ex27_hint.csproj", "{3DD9D9A3-DEB1-4535-9443-A42D4616AF43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -429,6 +431,10 @@ Global
 		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC79CBCF-F191-40DE-81FE-C61693C7DA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD9D9A3-DEB1-4535-9443-A42D4616AF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD9D9A3-DEB1-4535-9443-A42D4616AF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD9D9A3-DEB1-4535-9443-A42D4616AF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD9D9A3-DEB1-4535-9443-A42D4616AF43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
