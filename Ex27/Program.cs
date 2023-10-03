@@ -8,7 +8,7 @@ internal class Ex27
 {
     static void Main(string[] args)
     {
-        float r = (float)InputUtility.InputNumber("円の半径：");
+        float r = (float)InputUtility.InputNumber("円の半径：",0.125,500,"その値はおかしいよ！");
         Console.WriteLine(Circle.GetSurface(r));
 
         Rectangle rectangle = new Rectangle(
