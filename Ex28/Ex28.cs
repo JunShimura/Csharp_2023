@@ -9,30 +9,30 @@
     {
         static void Main(string[] args)
         {
- /*
-            float r = (float)InputUtility.InputNumber("円の半径：", 0.125, 500, "その値はおかしいよ！");
-            Console.WriteLine(Circle.GetSurface(r));
+            /*
+                       float r = (float)InputUtility.InputNumber("円の半径：", 0.125, 500, "その値はおかしいよ！");
+                       Console.WriteLine(Circle.GetSurface(r));
 
-            Rectangle rectangle = new Rectangle(
-                (float)InputUtility.InputNumber("長方形の幅："),
-                (float)InputUtility.InputNumber("長方形の高さ：")
-            );
-            Console.WriteLine($"rectangleの面積は{rectangle.GetSurface()}、周囲の長さは{rectangle.GetPerimeter()}");
+                       Rectangle rectangle = new Rectangle(
+                           (float)InputUtility.InputNumber("長方形の幅："),
+                           (float)InputUtility.InputNumber("長方形の高さ：")
+                       );
+                       Console.WriteLine($"rectangleの面積は{rectangle.GetSurface()}、周囲の長さは{rectangle.GetPerimeter()}");
 
-            Circle circle = new Circle(
-                (float)InputUtility.InputNumber("円の半径：")
-                );
-            Console.WriteLine($"circleの面積は{circle.GetSurface()}、周囲の長さは{circle.GetPerimeter()}");
-*/
+                       Circle circle = new Circle(
+                           (float)InputUtility.InputNumber("円の半径：")
+                           );
+                       Console.WriteLine($"circleの面積は{circle.GetSurface()}、周囲の長さは{circle.GetPerimeter()}");
+           */
             Triangle triangle = new Triangle(
-                1,(float)Math.Sqrt(3),2
+                1, (float)Math.Sqrt(2), 1
                 //(float)InputUtility.InputNumber("辺1の長さ："),
                 //(float)InputUtility.InputNumber("辺2の長さ："),
                 // (float)InputUtility.InputNumber("辺3の長さ：")
                 );
             Console.WriteLine($"triangleの面積は{triangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{triangle.GetPerimeter().ToString("00000.0000000000000000")}");
             Triangle rightTriangle = new Triangle(
-                1, (float)Math.Sqrt(3)
+                1, 1 //(float)Math.Sqrt(3)
                 //(float)InputUtility.InputNumber("直角三角形の底辺の長さ："),
                 //(float)InputUtility.InputNumber("直角三角形の高さ：")
                 );
@@ -172,6 +172,34 @@
             return side1 + side2 + side3;
         }
     }
+
+    class RightTriangle
+    {
+        private float side1;
+        private float side2;
+        private float side3;
+        public RightTriangle(float side1, float side2)
+        {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = (float)(Math.Sqrt((side1 * side1) + (side2 * side2)));
+        }
+
+
+        //面積を取得
+        public float GetSurface()
+        {
+            return (float)((double)side1 * side2 / 2);
+        }
+        //周囲の長さを取得
+        public float GetPerimeter()
+        {
+            return side1 + side2 + side3;
+        }
+    }
+
+
+
 
     // Boxクラスをこの下に作る
     class Box
