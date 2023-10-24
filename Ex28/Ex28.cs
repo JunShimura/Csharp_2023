@@ -25,19 +25,19 @@
                        Console.WriteLine($"circleの面積は{circle.GetSurface()}、周囲の長さは{circle.GetPerimeter()}");
            */
             Triangle triangle = new Triangle(
-                1, (float)Math.Sqrt(3), 2
+                1, (float)Math.Sqrt(2), 1
                 //(float)InputUtility.InputNumber("辺1の長さ："),
                 //(float)InputUtility.InputNumber("辺2の長さ："),
                 // (float)InputUtility.InputNumber("辺3の長さ：")
                 );
-            Console.WriteLine($"triangleの面積は{triangle.GetSurface()/*.ToString("00000.0000000000000000")*/}、周囲の長さは{triangle.GetPerimeter().ToString("00000.0000000000000000")}");
+            Console.WriteLine($"triangleの面積は{triangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{triangle.GetPerimeter().ToString("00000.0000000000000000")}");
             Triangle rightTriangle = new Triangle(
-                1, (float)Math.Sqrt(3)
+                1, 1 //(float)Math.Sqrt(3)
                 //(float)Math.Sqrt(3)
                 //(float)InputUtility.InputNumber("直角三角形の底辺の長さ："),
                 //(float)InputUtility.InputNumber("直角三角形の高さ：")
                 );
-            Console.WriteLine($"triangleの面積は{rightTriangle.GetSurface()/*.ToString("00000.0000000000000000")*/}、周囲の長さは{rightTriangle.GetPerimeter().ToString("00000.0000000000000000")}");
+            Console.WriteLine($"triangleの面積は{rightTriangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{rightTriangle.GetPerimeter().ToString("00000.0000000000000000")}");
             TriangularPrism triangularPrism = new TriangularPrism(1, 1, 5);
             Console.WriteLine($"triangularPrismの表面積は{triangularPrism.GetSurface()/*.ToString("00000.0000000000000000")*/}、体積は{triangularPrism.GetVolume().ToString("00000.0000000000000000")}");
 
