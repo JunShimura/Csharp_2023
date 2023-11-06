@@ -94,14 +94,22 @@ class Rectangle
         this.height = height;
     }
     //面積を取得
-    public float GetSurface()
+    static public float GetSurface(float width, float height)
     {
         return width * height;
     }
+    public float GetSurface()
+    {
+        return GetSurface(this.width, this.height);
+    }
     //周囲の長さを取得
-    public float GetPerimeter()
+    static public float GetPerimeter(float width, float height)
     {
         return (width + height) * 2;
+    }
+    public float GetPerimeter()
+    {
+        return GetPerimeter(width, height);
     }
 
 }
@@ -128,9 +136,13 @@ class Circle
 
     }
     //周囲の長さを取得
-    public float GetPerimeter()
+    static public float GetPerimeter(float radius)
     {
         return (float)(Math.PI * radius);
+    }
+    public float GetPerimeter()
+    {
+        return GetPerimeter(this.radius);
     }
 }
 class Triangle
@@ -159,17 +171,25 @@ class Triangle
 
 
     //面積を取得
-    public float GetSurface()
+    static public float GetSurface(float side1, float side2, float side3)
     {
         double s = (double)((side1 + side2 + side3) / 2);
         double t = s * (s - side1) * (s - side2) * (s - side3);
         t = Math.Sqrt(t);
         return (float)t;
     }
+    public float GetSurface()
+    {
+        return GetSurface(this.side1, this.side2, this.side3);
+    }
     //周囲の長さを取得
-    public float GetPerimeter()
+    static public float GetPerimeter(float side1, float side2, float side3)
     {
         return side1 + side2 + side3;
+    }
+    public float GetPerimeter()
+    {
+        return GetPerimeter(side1, side2, side3);
     }
 }
 
@@ -177,31 +197,31 @@ class RightTriangle
 {
     private float side1;
     private float side2;
-    private float side3;
     public RightTriangle(float side1, float side2)
     {
         this.side1 = side1;
         this.side2 = side2;
-        this.side3 = (float)(Math.Sqrt((side1 * side1) + (side2 * side2)));
     }
-
-
     //面積を取得
-    public float GetSurface()
+    static public float GetSurface(float side1, float side2)
     {
         return (float)((double)side1 * side2 / 2);
     }
+    public float GetSurface()
+    {
+        return GetSurface(side1, side2);
+    }
     //周囲の長さを取得
+    static public float GetPerimeter(float side1, float side2)
+    {
+        return (float)(side1 + side2 + (Math.Sqrt((side1 * side1) + (side2 * side2))));
+    }
     public float GetPerimeter()
     {
-        return side1 + side2 + side3;
+        return GetPerimeter(side1, side2);
     }
 }
 
-
-
-
-// Boxクラスをこの下に作る
 class Box
 {
     private Rectangle rectangle;
@@ -218,15 +238,34 @@ class Box
         this.height = height;
     }
     //表面積を取得するメソッドGetSurfaceが在る
-    public float GetSurface()
+    static public float GetSurface(Rectangle rectangle, float height)
     {
         //計算する
         return (rectangle.GetSurface() * 2 + rectangle.GetPerimeter() * height); //表面積を計算し返す 
     }
+    static public float GetSurface(float width, float height, float depth)
+    {
+        //計算する
+        return (Rectangle.GetSurface(width, depth) * 2
+            + Rectangle.GetPerimeter(width, depth) * height); //表面積を計算し返す 
+    }
+    public float GetSurface()
+    {
+        //計算する
+        return GetSurface(this.rectangle, this.height); //表面積を計算し返す 
+    }
     //体積を取得するメソッドGetVolumeが在る
-    public float GetVolume()
+    static public float GetVolume(Rectangle rectangle, float height)
     {
         return rectangle.GetSurface() * height;   //体積を計算し返す
+    }
+    static public float GetVolume(float width, float height, float depth)
+    {
+        return Rectangle.GetSurface(width, height) * depth;   //体積を計算し返す
+    }
+    public float GetVolume()
+    {
+        return GetVolume(this.rectangle, this.height);   //体積を計算し返す
     }
 }
 class Cylinder
@@ -328,13 +367,6 @@ class TriangularPyramid
 {
 
 }
-
-
-
-
-
-
-
 //使うときはここからコピー==============
 
 /// <summary>
@@ -374,5 +406,3 @@ class InputUtility
 
 }
 // ここまでコピー==============
-
-}
