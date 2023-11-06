@@ -33,8 +33,8 @@
             Console.WriteLine($"triangleの面積は{triangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{triangle.GetPerimeter().ToString("00000.0000000000000000")}");
             Triangle rightTriangle = new Triangle(
                 1, 1 //(float)Math.Sqrt(3)
-                //(float)InputUtility.InputNumber("直角三角形の底辺の長さ："),
-                //(float)InputUtility.InputNumber("直角三角形の高さ：")
+                     //(float)InputUtility.InputNumber("直角三角形の底辺の長さ："),
+                     //(float)InputUtility.InputNumber("直角三角形の高さ：")
                 );
             Console.WriteLine($"triangleの面積は{rightTriangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{rightTriangle.GetPerimeter().ToString("00000.0000000000000000")}");
 
@@ -84,24 +84,40 @@
     */
 
 
+    /// <summary>
+    /// RectAnge
+    /// </summary>
     class Rectangle
     {
         private float width;    // 幅
         private float height;   // 高さ
+        /// <summary>
+        /// RectAngle
+        /// </summary>
+        /// <param name="width">width</param>
+        /// <param name="height">height</param>
         public Rectangle(float width, float height)
         {
             this.width = width;
             this.height = height;
         }
         //面積を取得
-        public float GetSurface()
+        static public float GetSurface(float width, float height)
         {
             return width * height;
         }
+        public float GetSurface()
+        {
+            return GetSurface(width, height);
+        }
         //周囲の長さを取得
-        public float GetPerimeter()
+        static public float GetPerimeter(float width, float height)
         {
             return (width + height) * 2;
+        }
+        public float GetPerimeter()
+        {
+            return GetPerimeter(this.width, this.height);
         }
 
     }
