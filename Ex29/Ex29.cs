@@ -1,42 +1,138 @@
-﻿namespace Ex29;
-
-using System.Linq;
-
+﻿using System.Linq;
 using System;
 using System.Security.Cryptography;
 
+namespace Ex29;
 internal class Ex29
 {
     static void Main(string[] args)
     {
-        /*
-                   float r = (float)InputUtility.InputNumber("円の半径：", 0.125, 500, "その値はおかしいよ！");
-                   Console.WriteLine(Circle.GetSurface(r));
+        float p1 = 3;
+        float p2 = 4;
+        float p3 = 5;
+        float p4 = 2;
 
-                   Rectangle rectangle = new Rectangle(
-                       (float)InputUtility.InputNumber("長方形の幅："),
-                       (float)InputUtility.InputNumber("長方形の高さ：")
-                   );
-                   Console.WriteLine($"rectangleの面積は{rectangle.GetSurface()}、周囲の長さは{rectangle.GetPerimeter()}");
+        Rectangle rectangle = new Rectangle(p1, p2);
+        if (rectangle.GetPerimeter() == Rectangle.GetPerimeter(p1, p2))
+        {
+            Console.WriteLine("passd test1");
+        }
+        if (rectangle.GetSurface() == Rectangle.GetSurface(p1, p2))
+        {
+            Console.WriteLine("passd test2");
+        }
 
-                   Circle circle = new Circle(
-                       (float)InputUtility.InputNumber("円の半径：")
-                       );
-                   Console.WriteLine($"circleの面積は{circle.GetSurface()}、周囲の長さは{circle.GetPerimeter()}");
-       */
-        Triangle triangle = new Triangle(
-            1, (float)Math.Sqrt(2), 1
-            //(float)InputUtility.InputNumber("辺1の長さ："),
-            //(float)InputUtility.InputNumber("辺2の長さ："),
-            // (float)InputUtility.InputNumber("辺3の長さ：")
-            );
-        Console.WriteLine($"triangleの面積は{triangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{triangle.GetPerimeter().ToString("00000.0000000000000000")}");
-        Triangle rightTriangle = new Triangle(
-            1, 1 //(float)Math.Sqrt(3)
-                 //(float)InputUtility.InputNumber("直角三角形の底辺の長さ："),
-                 //(float)InputUtility.InputNumber("直角三角形の高さ：")
-            );
-        Console.WriteLine($"triangleの面積は{rightTriangle.GetSurface().ToString("00000.0000000000000000")}、周囲の長さは{rightTriangle.GetPerimeter().ToString("00000.0000000000000000")}");
+        Circle circle = new Circle(p1);
+        if (circle.GetPerimeter() == Circle.GetPerimeter(p1))
+        {
+            Console.WriteLine("passd test3");
+        }
+        if (circle.GetSurface() == Circle.GetSurface(p1))
+        {
+            Console.WriteLine("passd test4");
+        }
+
+        Triangle triangle = new Triangle(p1, p2, p3);
+        if (triangle.GetPerimeter() == Triangle.GetPerimeter(p1, p2, p3))
+        {
+            Console.WriteLine("passd test5");
+        }
+        if (triangle.GetSurface() == Triangle.GetSurface(p1, p2, p3))
+        {
+            Console.WriteLine("passd test6");
+        }
+
+        RightTriangle rightTriangle = new RightTriangle(p1, p2);
+        if (rightTriangle.GetPerimeter() == RightTriangle.GetPerimeter(p1, p2))
+        {
+            Console.WriteLine("passd test7");
+        }
+        if (rightTriangle.GetSurface() == RightTriangle.GetSurface(p1, p2))
+        {
+            Console.WriteLine("passd test8");
+        }
+
+        Box box = new Box(p1, p2, p3);
+        if (box.GetSurface() == Box.GetSurface(rectangle, p3))
+        {
+            Console.WriteLine("passd test9");
+        }
+        if (box.GetSurface() == Box.GetSurface(p1, p2, p3))
+        {
+            Console.WriteLine("passd test10");
+        }
+        if (box.GetVolume() == Box.GetVolume(rectangle, p3))
+        {
+            Console.WriteLine("passd test11");
+        }
+        if (box.GetVolume() == Box.GetVolume(p1, p2, p3))
+        {
+            Console.WriteLine("passd test12");
+        }
+
+        Cylinder cylinder = new Cylinder(p1, p2);
+        if (cylinder.GetSurface() == Cylinder.GetSurface(circle, p2))
+        {
+            Console.WriteLine("passd test13");
+        }
+        if (cylinder.GetSurface() == Cylinder.GetSurface(p1, p2))
+        {
+            Console.WriteLine("passd test14");
+        }
+        if (cylinder.GetVolume() == Cylinder.GetVolume(circle, p2))
+        {
+            Console.WriteLine("passd test15");
+        }
+        if (cylinder.GetVolume() == Cylinder.GetVolume(p1, p2))
+        {
+            Console.WriteLine("passd test16");
+        }
+
+        Sphere sphere = new Sphere(p1);
+        if (sphere.GetSurface() == Sphere.GetSurface(p1))
+        {
+            Console.WriteLine("passd test17");
+        }
+        if (sphere.GetVolume() == Sphere.GetVolume(p1))
+        {
+            Console.WriteLine("passd test18");
+        }
+
+        TriangularPrism triangularPrism = new TriangularPrism(p1, p2, p3, p4);
+        if (triangularPrism.GetSurface() == TriangularPrism.GetSurface(triangle, p4))
+        {
+            Console.WriteLine("passd test19");
+        }
+        if (triangularPrism.GetSurface() == TriangularPrism.GetSurface(p1, p2, p3, p4))
+        {
+            Console.WriteLine("passd test20");
+        }
+        if (triangularPrism.GetVolume() == TriangularPrism.GetVolume(triangle, p4))
+        {
+            Console.WriteLine("passd test21");
+        }
+        if (triangularPrism.GetVolume() == TriangularPrism.GetVolume(p1, p2, p3, p4))
+        {
+            Console.WriteLine("passd test22");
+        }
+
+        Cone cone=new Cone(p1,p2);
+        if (cone.GetSurface() == Cone.GetSurface(circle, p2))
+        {
+            Console.WriteLine("passd test23");
+        }
+        if (cone.GetSurface() == Cone.GetSurface(p1, p2))
+        {
+            Console.WriteLine("passd test24");
+        }
+        if (cone.GetVolume() == Cone.GetVolume(circle, p2))
+        {
+            Console.WriteLine("passd test25");
+        }
+        if (cone.GetVolume() == Cone.GetVolume(p1, p2))
+        {
+            Console.WriteLine("passd test26");
+        }
 
         /*
          *          Box box = new Box(
@@ -283,14 +379,30 @@ class Cylinder
         this.circle = new Circle(radius);
         this.height = height;
     }
+    static public float GetSurface(Circle circle, float height)
+    {
+        return (float)(circle.GetSurface() * 2 + circle.GetPerimeter() * height); //表面積を計算し返す 
+    }
+    static public float GetSurface(float radius, float height)
+    {
+        return (float)(Circle.GetSurface(radius) * 2 + Circle.GetPerimeter(radius) * height); //表面積を計算し返す 
+    }
     public float GetSurface()
     {
         //計算する
-        return (float)(circle.GetSurface() * 2 + circle.GetPerimeter() * height); //表面積を計算し返す 
+        return GetSurface(circle, height); //表面積を計算し返す 
+    }
+    static public float GetVolume(Circle circle, float height)
+    {
+        return (float)(circle.GetSurface() * height);   //体積を計算し返す
+    }
+    static public float GetVolume(float radius, float height)
+    {
+        return (float)(Circle.GetSurface(radius) * height);   //体積を計算し返す
     }
     public float GetVolume()
     {
-        return (float)(circle.GetSurface() * height);   //体積を計算し返す
+        return GetVolume(circle, height);   //体積を計算し返す
     }
 }
 class Sphere
@@ -300,14 +412,21 @@ class Sphere
     {
         this.radius = radius;
     }
+    static public float GetSurface(float radius)
+    {
+        return (float)(radius * radius * Math.PI * 4); //表面積を計算し返す 
+    }
     public float GetSurface()
     {
-        //計算する
-        return (float)(radius * radius * Math.PI * 4); //表面積を計算し返す 
+        return GetSurface(radius); //表面積を計算し返す 
+    }
+    static public float GetVolume(float radius)
+    {
+        return (float)(radius * radius * radius * Math.PI * 4 / 3);   //体積を計算し返す
     }
     public float GetVolume()
     {
-        return (float)(radius * radius * radius * Math.PI * 4 / 3);   //体積を計算し返す
+        return GetVolume(radius);   //体積を計算し返す
     }
 }
 class TriangularPrism
@@ -325,14 +444,31 @@ class TriangularPrism
         this.triangle = new Triangle(side1, side2, side3);
         this.height = height;
     }
+    static public float GetSurface(Triangle triangle, float height)
+    {
+        return (float)(triangle.GetSurface() * 2
+            + triangle.GetPerimeter() * height); //表面積を計算し返す 
+    }
+    static public float GetSurface(float side1, float side2, float side3, float height)
+    {
+        return Triangle.GetSurface(side1, side2, side3) * 2
+            + Triangle.GetPerimeter(side1, side2, side3) * height; //表面積を計算し返す 
+    }
     public float GetSurface()
     {
-        //計算する
-        return (float)(triangle.GetSurface() * 2 + triangle.GetPerimeter() * height); //表面積を計算し返す 
+        return GetSurface(triangle, height); //表面積を計算し返す 
+    }
+    static public float GetVolume(Triangle triangle, float height)
+    {
+        return (float)(triangle.GetSurface() * height);   //体積を計算し返す
+    }
+    static public float GetVolume(float side1, float side2, float side3, float height)
+    {
+        return (float)(Triangle.GetSurface(side1, side2, side3) * height);   //体積を計算し返す
     }
     public float GetVolume()
     {
-        return (float)(triangle.GetSurface() * height);   //体積を計算し返す
+        return GetVolume(triangle, height);   //体積を計算し返す
     }
 }
 class Cone
@@ -350,14 +486,32 @@ class Cone
         circle = new Circle(radius);
         this.height = height;
     }
-    public float GetSurface()
+    static public float GetSurface(Circle circle, float height)
     {
         double r2 = Math.Sqrt(circle.GetRadius() * circle.GetRadius() + height * height);
         return (float)(circle.GetSurface() + r2 * r2 * Math.PI * circle.GetRadius() / r2);
     }
-    public float GetVolume()
+    static public float GetSurface(float radius, float height)
+    {
+        double r2 = Math.Sqrt(radius * radius + height * height);
+        return (float)(Circle.GetSurface(radius) + r2 * r2 * Math.PI * radius / r2);
+    }
+
+    public float GetSurface()
+    {
+        return GetSurface(circle, height);
+    }
+    static public float GetVolume(Circle circle, float height)
     {
         return (float)((double)circle.GetSurface() * height / 3);
+    }
+    static public float GetVolume(float radius, float height)
+    {
+        return (float)((double)Circle.GetSurface(radius) * height / 3);
+    }
+    public float GetVolume()
+    {
+        return GetVolume(circle, height);
     }
 
 
