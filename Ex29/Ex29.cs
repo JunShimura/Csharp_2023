@@ -15,123 +15,123 @@ internal class Ex29
         Rectangle rectangle = new Rectangle(p1, p2);
         if (rectangle.GetPerimeter() == Rectangle.GetPerimeter(p1, p2))
         {
-            Console.WriteLine("passd test1");
+            Console.WriteLine("passed test1");
         }
         if (rectangle.GetSurface() == Rectangle.GetSurface(p1, p2))
         {
-            Console.WriteLine("passd test2");
+            Console.WriteLine("passed test2");
         }
 
         Circle circle = new Circle(p1);
         if (circle.GetPerimeter() == Circle.GetPerimeter(p1))
         {
-            Console.WriteLine("passd test3");
+            Console.WriteLine("passed test3");
         }
         if (circle.GetSurface() == Circle.GetSurface(p1))
         {
-            Console.WriteLine("passd test4");
+            Console.WriteLine("passed test4");
         }
 
         Triangle triangle = new Triangle(p1, p2, p3);
         if (triangle.GetPerimeter() == Triangle.GetPerimeter(p1, p2, p3))
         {
-            Console.WriteLine("passd test5");
+            Console.WriteLine("passed test5");
         }
         if (triangle.GetSurface() == Triangle.GetSurface(p1, p2, p3))
         {
-            Console.WriteLine("passd test6");
+            Console.WriteLine("passed test6");
         }
 
         RightTriangle rightTriangle = new RightTriangle(p1, p2);
         if (rightTriangle.GetPerimeter() == RightTriangle.GetPerimeter(p1, p2))
         {
-            Console.WriteLine("passd test7");
+            Console.WriteLine("passed test7");
         }
         if (rightTriangle.GetSurface() == RightTriangle.GetSurface(p1, p2))
         {
-            Console.WriteLine("passd test8");
+            Console.WriteLine("passed test8");
         }
 
         Box box = new Box(p1, p2, p3);
         if (box.GetSurface() == Box.GetSurface(rectangle, p3))
         {
-            Console.WriteLine("passd test9");
+            Console.WriteLine("passed test9");
         }
         if (box.GetSurface() == Box.GetSurface(p1, p2, p3))
         {
-            Console.WriteLine("passd test10");
+            Console.WriteLine("passed test10");
         }
         if (box.GetVolume() == Box.GetVolume(rectangle, p3))
         {
-            Console.WriteLine("passd test11");
+            Console.WriteLine("passed test11");
         }
         if (box.GetVolume() == Box.GetVolume(p1, p2, p3))
         {
-            Console.WriteLine("passd test12");
+            Console.WriteLine("passed test12");
         }
 
         Cylinder cylinder = new Cylinder(p1, p2);
         if (cylinder.GetSurface() == Cylinder.GetSurface(circle, p2))
         {
-            Console.WriteLine("passd test13");
+            Console.WriteLine("passed test13");
         }
         if (cylinder.GetSurface() == Cylinder.GetSurface(p1, p2))
         {
-            Console.WriteLine("passd test14");
+            Console.WriteLine("passed test14");
         }
         if (cylinder.GetVolume() == Cylinder.GetVolume(circle, p2))
         {
-            Console.WriteLine("passd test15");
+            Console.WriteLine("passed test15");
         }
         if (cylinder.GetVolume() == Cylinder.GetVolume(p1, p2))
         {
-            Console.WriteLine("passd test16");
+            Console.WriteLine("passed test16");
         }
 
         Sphere sphere = new Sphere(p1);
         if (sphere.GetSurface() == Sphere.GetSurface(p1))
         {
-            Console.WriteLine("passd test17");
+            Console.WriteLine("passed test17");
         }
         if (sphere.GetVolume() == Sphere.GetVolume(p1))
         {
-            Console.WriteLine("passd test18");
+            Console.WriteLine("passed test18");
         }
 
         TriangularPrism triangularPrism = new TriangularPrism(p1, p2, p3, p4);
         if (triangularPrism.GetSurface() == TriangularPrism.GetSurface(triangle, p4))
         {
-            Console.WriteLine("passd test19");
+            Console.WriteLine("passed test19");
         }
         if (triangularPrism.GetSurface() == TriangularPrism.GetSurface(p1, p2, p3, p4))
         {
-            Console.WriteLine("passd test20");
+            Console.WriteLine("passed test20");
         }
         if (triangularPrism.GetVolume() == TriangularPrism.GetVolume(triangle, p4))
         {
-            Console.WriteLine("passd test21");
+            Console.WriteLine("passed test21");
         }
         if (triangularPrism.GetVolume() == TriangularPrism.GetVolume(p1, p2, p3, p4))
         {
-            Console.WriteLine("passd test22");
+            Console.WriteLine("passed test22");
         }
 
-        Cone cone=new Cone(p1,p2);
+        Cone cone = new Cone(p1, p2);
         if (cone.GetSurface() == Cone.GetSurface(circle, p2))
         {
-            Console.WriteLine("passd test23");
+            Console.WriteLine("passed test23");
         }
         if (cone.GetSurface() == Cone.GetSurface(p1, p2))
         {
-            Console.WriteLine("passd test24");
+            Console.WriteLine("passed test24");
         }
         if (cone.GetVolume() == Cone.GetVolume(circle, p2))
         {
-            Console.WriteLine("passd test25");
+            Console.WriteLine("passed test25");
         }
         if (cone.GetVolume() == Cone.GetVolume(p1, p2))
         {
-            Console.WriteLine("passd test26");
+            Console.WriteLine("passed test26");
         }
 
         /*
@@ -222,14 +222,13 @@ class Circle
         return radius;
     }
     //面積を取得
-    public float GetSurface()
-    {
-        return (float)(Math.PI * radius * radius);
-    }
     public static float GetSurface(float radius)
     {
         return (float)(Math.PI * radius * radius);
-
+    }
+    public float GetSurface()
+    {
+        return (float)(Math.PI * radius * radius);
     }
     //周囲の長さを取得
     static public float GetPerimeter(float radius)
@@ -342,6 +341,7 @@ class Box
     static public float GetSurface(float width, float height, float depth)
     {
         //計算する
+        //return GetSurface(new Rectangle(width, depth), height);
         return (Rectangle.GetSurface(width, depth) * 2
             + Rectangle.GetPerimeter(width, depth) * height); //表面積を計算し返す 
     }
