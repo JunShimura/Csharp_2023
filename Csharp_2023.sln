@@ -151,7 +151,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex28", "Ex28\Ex28.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex28_Suzuki", "Ex28_Suzuki\Ex28_Suzuki.csproj", "{879C0419-C5B1-4477-81BE-212E28C16E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex29", "Ex29\Ex29.csproj", "{11685A04-E0F6-42FC-82FF-D6DDEB1C41D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex29", "Ex29\Ex29.csproj", "{11685A04-E0F6-42FC-82FF-D6DDEB1C41D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceSample", "InheritanceSample\InheritanceSample.csproj", "{AF32E91F-6E6E-43F7-A8CE-22CC1C69807C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -459,6 +461,10 @@ Global
 		{11685A04-E0F6-42FC-82FF-D6DDEB1C41D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11685A04-E0F6-42FC-82FF-D6DDEB1C41D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11685A04-E0F6-42FC-82FF-D6DDEB1C41D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF32E91F-6E6E-43F7-A8CE-22CC1C69807C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF32E91F-6E6E-43F7-A8CE-22CC1C69807C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF32E91F-6E6E-43F7-A8CE-22CC1C69807C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF32E91F-6E6E-43F7-A8CE-22CC1C69807C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
