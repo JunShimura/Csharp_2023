@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 namespace Ex29;
 internal class Ex29
 {
-    static void Main(string[] args)
+    static void FullTest()
     {
         float p1 = 3;
         float p2 = 4;
@@ -153,6 +153,18 @@ internal class Ex29
                     Cone cone = new Cone(circle, 5);
                     Console.WriteLine($"coneの表面積は{cone.GetSurface()}、体積は{cone.GetVolume()}");
         */
+    }
+
+    static void Main(string[] args)
+    {
+        var v1 = (float)InputUtility.InputNumber("辺1を入れてください");
+        var v2 = (float)InputUtility.InputNumber("辺2を入れてください");
+        var v3 = (float)InputUtility.InputNumber("辺3を入れてください");
+
+        Triangle triangle1 = new Triangle(v1, v2, v3);
+        var s = triangle1.GetSurface();
+        var l = triangle1.GetPerimeter();
+        Console.WriteLine($"面積＝{s}、周囲の長さ＝{l}");
     }
 }
 // 平面の図形
