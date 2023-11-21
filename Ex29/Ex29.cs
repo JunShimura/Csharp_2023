@@ -228,7 +228,7 @@ class Circle
     }
     public float GetSurface()
     {
-        return (float)(Math.PI * radius * radius);
+        return GetSurface(radius);
     }
     //周囲の長さを取得
     static public float GetPerimeter(float radius)
