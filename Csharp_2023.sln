@@ -157,6 +157,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceSample", "Inheri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex30_tepmlate", "Ex30_tepmlate\Ex30_tepmlate.csproj", "{56DC154B-738B-4AD6-B1BB-12EE7EF56405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceSample2023", "InheritanceSample2023\InheritanceSample2023.csproj", "{49F61C48-679E-468E-AEA9-04F7D43945A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -471,6 +473,10 @@ Global
 		{56DC154B-738B-4AD6-B1BB-12EE7EF56405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56DC154B-738B-4AD6-B1BB-12EE7EF56405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56DC154B-738B-4AD6-B1BB-12EE7EF56405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F61C48-679E-468E-AEA9-04F7D43945A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F61C48-679E-468E-AEA9-04F7D43945A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F61C48-679E-468E-AEA9-04F7D43945A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F61C48-679E-468E-AEA9-04F7D43945A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
