@@ -4,8 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Person person = new Person("Jun Shimura", 25);
-            person.SelfIntroduction();
+            Person[] persons 
+            = { 
+                new Person("Jun Shimura", 25), 
+                new Student("Riku Sawamura", 19,6)
+            };
+            foreach (Person person in persons)
+            {
+                person.SelfIntroduction();
+            }
         }
     }
     /// <summary>
@@ -26,7 +33,6 @@
         public void SelfIntroduction()
         {
             SelfIntroduction(this);
-            //Console.WriteLine($"私の名前は{name}です、年齢は{age}です。");
         }
         /// <summary>
         /// 自己紹介
@@ -35,6 +41,14 @@
         static public void SelfIntroduction(Person p)
         {
             Console.WriteLine($"私の名前は{p.name}です、年齢は{p.age}です。");
+        }
+    }
+    class Student : Person
+    {
+        private int id;  // 学籍番号
+        public Student(string name, int age = 0, int id = 0) : base(name, age)
+        {
+            this.id = id;
         }
     }
 }
