@@ -6,8 +6,8 @@
         {
             Person[] persons 
             = { 
-                new Person("Jun Shimura", new DateTime(2001,12,10)), 
-                new Student("Riku Sawamura", new DateTime(2001,12,10),6)
+                new Person("Jun Shimura", new DateTime(2001,6,2)), 
+                new Student("Riku Sawamura", new DateTime(2004,7,18),6)
             };
             foreach (Person person in persons)
             {
