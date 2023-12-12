@@ -20,7 +20,6 @@
             sawamura.SelfIntroduction();
             Worker seki = (Worker)persons[2];
             seki.SelfIntroduction();
-
         }
     }
     /// <summary>
@@ -38,7 +37,7 @@
         /// <summary>
         /// 自己紹介
         /// </summary>
-        public void SelfIntroduction()
+        public virtual void SelfIntroduction()
         {
             SelfIntroduction(this);
         }
@@ -63,6 +62,11 @@
         {
             this.organization = organization;
         }
+        public override void SelfIntroduction()
+        {
+            base.SelfIntroduction();
+            Console.WriteLine($"所属する団体は{this.organization}です。");
+        }
     }
 
     class Student : Member
@@ -73,7 +77,7 @@
         {
             this.id = id;
         }
-        public void SelfIntroduction()  //学生さんの自己紹介
+        public override void SelfIntroduction()  //学生さんの自己紹介
         {
             base.SelfIntroduction();    // 親のメソッドを呼ぶ
             Console.WriteLine($"学籍番号は{this.id}です。");
@@ -86,6 +90,11 @@
             : base(name, birthday,organization)
         {
             this.income = income;
+        }
+        public override void SelfIntroduction()  //学生さんの自己紹介
+        {
+            base.SelfIntroduction();    // 親のメソッドを呼ぶ
+            Console.WriteLine($"収入は{this.income}円です。");
         }
     }
 }
