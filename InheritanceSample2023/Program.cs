@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Person[] persons 
-            = { 
+            Person[] persons
+            = {
                 new Person("Jun Shimura", new DateTime(2001,6,2)),      // 生年月日 updated 20231205
-                new Student("Riku Sawamura", new DateTime(2004,7,18),6), // 生年月日 updated 20231205
-                new Worker("Utaro Seki",new DateTime(1997,8,28),10000000)
+                new Student("Riku Sawamura", new DateTime(2004,7,18),"デジタルアーツ仙台",6), // 生年月日 updated 20231205
+                new Worker("Utaro Seki",new DateTime(1997,8,28),"Seki corporation", 10000000)
             };
             foreach (Person person in persons)
             {
@@ -16,8 +16,11 @@
             }
             //個別で自己紹介
             Console.WriteLine("***個別で自己紹介***");
-            Student s = (Student)persons[1];
-            s.SelfIntroduction();
+            Student sawamura = (Student)persons[1];
+            sawamura.SelfIntroduction();
+            Worker seki = (Worker)persons[2];
+            seki.SelfIntroduction();
+
         }
     }
     /// <summary>
@@ -35,7 +38,7 @@
         /// <summary>
         /// 自己紹介
         /// </summary>
-        public virtual void SelfIntroduction()
+        public void SelfIntroduction()
         {
             SelfIntroduction(this);
         }
@@ -49,23 +52,38 @@
             Console.WriteLine($"誕生日は{p.birthday.ToString("yyyy/M/d")}です。");// 生年月日 updated 20231205
         }
     }
-    class Student : Person
+
+    /// <summary>
+    /// 団体に属している人
+    /// </summary>
+    class Member : Person
+    {
+        public string organization; // 所属団体
+        public Member(string name, DateTime birthday, string organization) : base(name, birthday)
+        {
+            this.organization = organization;
+        }
+    }
+
+    class Student : Member
     {
         private int id;  // 学籍番号
-        public Student(string name, DateTime birthday, int id = 0) : base(name, birthday)// 生年月日 updated 20231205
+        public Student(string name, DateTime birthday, string organization, int id = 0)
+            : base(name, birthday, organization)// 生年月日 updated 20231205
         {
             this.id = id;
         }
-        public override void SelfIntroduction()  //学生さんの自己紹介
+        public void SelfIntroduction()  //学生さんの自己紹介
         {
             base.SelfIntroduction();    // 親のメソッドを呼ぶ
             Console.WriteLine($"学籍番号は{this.id}です。");
         }
     }
-    class Worker : Person
+    class Worker : Member
     {
         private int income; // 収入
-        public Worker(string name,DateTime birthday, int income=0):base(name, birthday)
+        public Worker(string name, DateTime birthday, string organization, int income = 0)
+            : base(name, birthday,organization)
         {
             this.income = income;
         }
