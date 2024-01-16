@@ -10,7 +10,8 @@
                 (float)InputUtility.InputNumber("奥行：")
                );
 
-            Box box1 = new Box(3, 4.5f, 7);
+            Box box1 = new Box(1, 2, 3);
+            box1 = box;
             // 作られたboxのインスタンスを用いて表面積と体積を取り出して表示
             Console.WriteLine($"boxの表面積は{box.GetSurface()}、体積は{box.GetVolume()}");
             Console.WriteLine($"box1の表面積は{box1.GetSurface()}、体積は{box1.GetVolume()}");

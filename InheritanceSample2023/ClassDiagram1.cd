@@ -8,20 +8,20 @@
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceSample2023.Person">
-    <Position X="0.5" Y="0.5" Width="2" />
+    <Position X="0.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAgAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceSample2023.Student">
-    <Position X="6" Y="0.5" Width="2" />
-    <InheritanceLine Type="InheritanceSample2023.Member" FixedToPoint="true">
+    <Position X="5.5" Y="1.5" Width="2" />
+    <InheritanceLine Type="InheritanceSample2023.Member" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.125" Y="0.5" />
-        <Point X="4.125" Y="0.26" />
-        <Point X="7.167" Y="0.26" />
-        <Point X="7.167" Y="0.5" />
+        <Point X="5" Y="1.687" />
+        <Point X="5.24" Y="1.687" />
+        <Point X="5.24" Y="2.475" />
+        <Point X="5.5" Y="2.475" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -30,14 +30,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceSample2023.Worker">
-    <Position X="6" Y="3.25" Width="2" />
+    <Position X="5.5" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InheritanceSample2023.Member">
-    <Position X="3.25" Y="0.5" Width="1.75" />
+    <Position X="3.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>

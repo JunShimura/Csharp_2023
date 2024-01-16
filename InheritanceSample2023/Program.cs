@@ -16,10 +16,13 @@
             }
             //個別で自己紹介
             Console.WriteLine("***個別で自己紹介***");
+            Person shimura = persons[0];
+            shimura.SelfIntroduction();
             Student sawamura = (Student)persons[1];
             sawamura.SelfIntroduction();
             Worker seki = (Worker)persons[2];
             seki.SelfIntroduction();
+        
         }
     }
     /// <summary>
@@ -62,11 +65,13 @@
         {
             this.organization = organization;
         }
-        public override void SelfIntroduction()
+        
+        public override  void SelfIntroduction()
         {
             base.SelfIntroduction();
             Console.WriteLine($"所属する団体は{this.organization}です。");
         }
+        
     }
 
     class Student : Member
@@ -77,11 +82,13 @@
         {
             this.id = id;
         }
-        public override void SelfIntroduction()  //学生さんの自己紹介
+        
+        public override  void SelfIntroduction()  //学生さんの自己紹介
         {
             base.SelfIntroduction();    // 親のメソッドを呼ぶ
             Console.WriteLine($"学籍番号は{this.id}です。");
         }
+        
     }
     class Worker : Member
     {
@@ -91,6 +98,7 @@
         {
             this.income = income;
         }
+        
         public override void SelfIntroduction()  //学生さんの自己紹介
         {
             base.SelfIntroduction();    // 親のメソッドを呼ぶ
